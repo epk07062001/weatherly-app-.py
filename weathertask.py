@@ -20,7 +20,8 @@ def format_response(weather):
 
 		final_str = 'City: %s \nConditions: %s \nTemperature (°c): %s ' % (name, desc, temp )
 	except:
-		final_str ='There was a problem retrieving the information of\n' + entry.get() +' or\n the  name you have entered is incorrect'  
+		final_str ='There was a problem retrieving the information of\n' + entry.get() +' or\n the  name you have entered is incorrect'  #,'\n',entry.get(), 'or' ,'
+
 
 	return final_str
 
@@ -47,17 +48,17 @@ background_label.place(relwidth=1, relheight=1)"""
 
 
 
-frame = tk.Frame(root, bg='#ff3300', bd=5)
-frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
+frame = tk.Frame(root, bg='#ff3300', bd=10)
+frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.75, anchor='n')
 
-entry = tk.Entry(frame, font=60)
-entry.place(relwidth=0.65, relheight=1)
+entry = tk.Entry(frame, font=30)
+entry.place(relx=0.28,relwidth=0.4, relheight=0.1)
 
 button = tk.Button(frame, text="Get Weather", font=40,bg = 'yellow', command=lambda: get_weather(entry.get()))
-button.place(relx=0.7, relheight=1, relwidth=0.3)
+button.place(relx=0.33,rely = 0.14, relheight=0.1, relwidth=0.3)
 
 lower_frame = tk.Frame(root, bg='#00ff00', bd=10)
-lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
+lower_frame.place(relx=0.5, rely=0.33, relwidth=0.75, relheight=0.6, anchor='n')
 
 label = tk.Label(lower_frame , font = 75)
 label.place(relwidth=1, relheight=1)
