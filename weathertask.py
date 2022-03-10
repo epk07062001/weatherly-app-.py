@@ -42,9 +42,9 @@ root = tk.Tk()
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
-"""background_widget = tk.PhotoImage(file='weather.png')
+background_widget = tk.PhotoImage(file='weather.png')
 background_label = tk.Label(root, image=background_widget)
-background_label.place(relwidth=1, relheight=1)"""
+background_label.place(relwidth=1, relheight=1)
 
 
 
